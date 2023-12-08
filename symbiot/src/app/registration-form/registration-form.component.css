@@ -1,0 +1,270 @@
+/* about.component.css */
+/* @media only screen and (min-width: 599.98px){} */
+.about-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  width: 96%;
+  /* position: relative; */
+ 
+}
+
+
+.input-box {
+  margin-top: 20px;
+}
+.dropdowns6 option{
+  text-align: center;
+}
+
+.dropdowns5 option{
+  text-align: center;
+}
+
+.dropdowns4 option{
+  text-align: center;
+}
+.dropdowns3 option{
+  text-align: center;
+}
+.dropdowns2 option{
+  text-align: center;
+}
+.dropdowns1 option{
+  text-align: center;
+}
+
+
+.checkboxes {
+  margin-top: 10px;
+  display: flex;
+  /* align-items: center; */
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* .checkboxes input[type="checkbox"] {
+  margin-right: 5px;
+} */
+
+.result-filters {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+.result-filters-header {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #fff;
+  padding: 0 10px;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+}
+
+.left-filters,
+.right-filters {
+  flex: 1;
+  padding: 10px;
+}
+
+.left-filters {
+  border-right: 1px solid #ccc;
+}
+
+.right-filters {
+  padding-left: 20px;
+}
+
+.dropdowns1 select {
+  width: 30%;
+  padding: 5px;
+  margin-top: 5px;
+  position: absolute;
+  top: 45px;
+  left: 105px;
+}
+
+.dropdowns2 select {
+  /* width: 360px; */
+  width: 30%;
+
+  padding: 5px;
+  margin-top: 6px;
+  position: absolute;
+  top: 78px;
+  left: 105px;
+}
+.dropdowns3 select {
+  /* width: 360px; */
+  width: 30%;
+
+  padding: 5px;
+  margin-top: 5px;
+  position: absolute;
+  top: 113px;
+  left: 105px;
+}
+
+.dropdowns4 select {
+  /* width: 355px; */
+  width: 30%;
+
+  padding: 5px;
+  margin-top: 5px;
+  position: absolute;
+  top: 47px;
+  /* left: 556px */
+  left: 66%;
+
+}
+.dropdowns5 select {
+  /* width: 355px; */
+  width: 30%;
+
+  padding: 5px;
+  margin-top: 5px;
+  position: absolute;
+  top: 84px;
+  /* left: 557px; */
+  left: 66%;
+
+}
+
+.dropdowns6 select {
+  /* width: 355px; */
+  width: 30%;
+  
+  padding: 5px;
+  margin-top: 5px;
+  position: absolute;
+  top: 122px;
+  left: 66%;
+}
+.rules-definitions {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules-definitions-header {
+  background-color: #fff;
+  color: #3498db;
+  font-weight: bold;
+  margin-top: -18px;
+}
+
+.add-icon {
+  background-color: #3498db;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+
+.input-box input{
+
+  
+  position: absolute;
+  top: 18px;
+  left: 76px;
+  width: 80%;
+  height: 20px;
+}
+
+.popup {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.popup-content {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+position: relative;
+text-align: center;
+width: 387px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+height:166px;
+align-items: center;
+}
+
+.close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+cursor: pointer;
+}
+
+form {
+text-align: left;
+}
+
+select {
+display: block;
+margin-bottom: -7px;
+width: 202px;
+}
+
+button {
+display: block;
+margin: 0 auto;
+position: absolute;
+left: 359px;
+}
+.hie{
+background-color: navy;
+color: aliceblue;
+font-size: 8px;
+height: 25px;
+}
+
+button[disabled]{
+cursor: not-allowed;
+}
+button{
+cursor: pointer;
+}
+
+li{
+text-decoration: none;
+}

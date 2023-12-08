@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-nav">
+            <div class="symbiot">
+                <b>SYMBIOT</b>
+                <div class="power-by">
+                    POWERED BY ISKRAEMECO
+                </div>
+            </div>
+            <div class="mdm">
+                MDM Operator
+            </div>
+            <ul class="nav-list">
+                <li><i class="fa-solid fa-house"></i>Start Page</li>
+                <li><a href="/about">Documents</a></li>
+                <li><a href="/contact">Activities</a></li>
+                <li><a href="/">Schedules</a></li>
+            </ul>
+            <div class="super">
+                <i class="fa-solid fa-user"></i>Supervisor
+                <i class="fa-solid fa-circle-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="second-nav">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-file"></i> Documents
+                    </a>
+                </li>
+                <div class="cre-duc">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <li><a href="#">Create Document</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search"></i>
+                <div class="loading-spinners">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Validation Documents
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Validation Documents1</a></li>
+                    <li><a href="#">Validation Documents2</a></li>
+                    <li><a href="#">Validation Documents3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Estimation Documents
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Validation Documents1</a></li>
+                    <li><a href="#">Validation Documents2</a></li>
+                    <li><a href="#">Validation Documents3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Aggregation Documents
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Validation Documents1</a></li>
+                    <li><a href="#">Validation Documents2</a></li>
+                    <li><a href="#">Validation Documents3</a></li>
+                </ul>
+            </div>
+            <!-- Content for the left sidebar goes here -->
+        </div>
+        <div class="main-content">
+            <!-- Content for the main content area goes here -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</body>
+</html>

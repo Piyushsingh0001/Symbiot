@@ -1,0 +1,684 @@
+<!-- navbar.component.html -->
+
+
+
+
+
+<div class="navbar" >
+  <div class="navbar-left">
+    <span>AE+</span>
+    <span class="separator">|</span>
+    <span>Load Profile</span>
+    <i class="fa fa-trash delete-icon" ></i>
+    <i class="fa fa-plus plus-icon"></i>
+    <span>Conditional</span>
+    <i class="fa fa-plus plus-icon"></i>
+    <div class="dropdown">
+      <span>Rule</span>
+      <i class="fa fa-caret-down"></i>
+      <div class="dropdown-content">
+          <!-- <a (click)="showSumTestBox = !showSumTestBox ">Sum Test</a>
+          <a (click)="showConstantTestBox  = !showConstantTestBox ">Constant Test</a>
+ 
+          <a (click)="showSpikeTestBox  = !showSpikeTestBox ">Spike Test</a>
+          <a (click)="showMissingTestBox  = !showMissingTestBox ">Missing Data Test</a>
+          <a (click)="showHistoryTestBox  = !showHistoryTestBox ">History Test</a>
+          <a (click)="showControlTestBox  = !showControlTestBox ">Control Test</a>
+      <a (click)="showCustomTestBox  = !showCustomTestBox ">Custom Test</a> -->
+
+      <a (click)="addTest('Sum Test')">Sum Test</a>
+      <a (click)="addTest('Constant Test')">Constant Test</a>
+      <a (click)="addTest('Spike Test')">Spike Test</a>
+      <a (click)="addTest('Missing Data Test')">Missing Data Test</a>
+      <a (click)="addTest('History Test')">History Test</a>
+      <a (click)="addTest('Control Test')">Control Test</a>
+      <a (click)="addTest('Custom Test')">Custom Test</a>
+
+
+
+        <!-- <a (click)="toggleTest('Spike Test')">Spike Test</a>
+        <a (click)="toggleTest('Missing Data Test')">Missing Data Test</a>
+        <a (click)="toggleTest('History Test')">History Test</a>
+        <a (click)="toggleTest('Control Test')">Control Test</a>
+        <a (click)="toggleTest('Custom Test')">Custom Test</a> -->
+
+  </div>
+  </div>
+
+  </div>
+  <div class="navbar-right">
+      <div class="dropdown">
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+          <a href="#">Dropdown Option 1</a>
+          <a href="#">Dropdown Option 2</a>
+          <a href="#">Dropdown Option 3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rectangular-box-container">
+
+    <!-- <div class="rectangular-box" *ngFor="let test of selectedTests; let i = index ">
+      <a (click)="toggleTest(test)" class="box-contents"></a>
+
+      
+      <div *ngIf="test.type === 'Sum Test'"> -->
+
+<!--    for sum test-->
+
+  <!-- <div class="rectangular-box" *ngIf="showSumTestBox"> -->
+
+    <!-- <p class="box-sumcontent">Sum Test</p> -->
+
+    <ng-container *ngFor="let test of selectedTests; let i = index">
+      <div class="rectangular-box">
+        <a class="box-contents">{{ test.type }}</a>
+        <i class="fa fa-trash delete-icon" (click)="removeTest(i)"></i>
+        <div *ngIf="test.type === 'Sum Test'">
+
+        <div class="left-sumcontent">
+          <p>Operations</p>
+          <div class="sum-dropdown">
+            <select> 
+              <option value="leftOption1">==</option>
+              <option value="leftOption2"> < </option>
+              <option value="leftOption2"> > </option>
+              <option value="leftOption2"><=</option>
+              <option value="leftOption2">>=</option>
+              <option value="leftOption2">!=</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="sumsum">
+          <p>Sum</p>
+          <input type="text" class="sum-int"  placeholder="Provide bound value with units"  >
+          <i class="fa-solid fa-lock"></i>
+
+
+          <select class="sumlckdropdown1" name="dropdown1" >
+      
+            <option value="option1"></option>
+            <option value="option2">Constant</option>
+            <option value="option3">Attribute</option>
+            <option value="option1">Result From</option>
+           
+          </select>
+
+
+        </div>
+        <div class="max-devs">
+          <p>Max Deviation</p>
+          <input type="text" class="max-dvs"  placeholder="Provide allowed max devations on bound"  >
+          <i class="fa-solid fa-lock"></i>
+
+          <select class="sumlckdropdown2" name="dropdown1" >
+      
+            <option value="option1"></option>
+            <option value="option2">Constant</option>
+            <option value="option3">Attribute</option>
+            <option value="option1">Result From</option>
+           
+          </select>
+
+
+        </div>
+            </div>
+
+
+<!-- Constant Test Box -->
+
+
+            <div *ngIf="test.type === 'Constant Test'">
+            
+              <div class="left-content">
+            
+                <p class="oper">Operations</p>
+            
+                <div class="dropdowen">
+                  
+                  <select>
+                    <option value="leftOption1">==</option>
+              <option value="leftOption2"> < </option>
+              <option value="leftOption2"> > </option>
+              <option value="leftOption2"><=</option>
+              <option value="leftOption2">>=</option>
+              <option value="leftOption2">!=</option>
+                  </select>
+                </div>
+                <div class="con-checkboxe">
+                  <input type="checkbox" id="conversionCheckbox" />
+                  <label for="conversionCheckbox">Allow conversion from cumulative to advance</label>
+                </div>
+              </div>
+              <div class="bound">
+                <p>Bound</p>
+                <input type="text" class="bud-int"  placeholder="Provide bound value with units"  >
+                <i class="fa-solid fa-lock"></i>
+
+                <select class="conlckdropdown1" name="dropdown1" >
+      
+                  <option value="option1"></option>
+                  <option value="option2">Constant</option>
+                  <option value="option3">Attribute</option>
+                  <option value="option1">Result From</option>
+                 
+                </select>
+
+
+
+              </div>
+              <div class="max-dev">
+                <p>Max Deviation</p>
+                <input type="text" class="max-dv"  placeholder="Provide allowed max devations on bound"  >
+                <i class="fa-solid fa-lock"></i>
+                <select class="conlckdropdown2" name="dropdown1" >
+      
+                  <option value="option1"></option>
+                  <option value="option2">Constant</option>
+                  <option value="option3">Attribute</option>
+                  <option value="option1">Result From</option>
+                 
+                </select>
+
+              </div>
+         
+              <div class="right-content">
+                <p>Interval</p>
+                <div class="dropdown">
+                  <select>
+                    <option value="bound">Select Data Interval types</option>
+                    <option value="bound">Each Value</option>
+                    <option value="maxDeviation">Whole Interval</option>
+                    <option value="interval">Partial Interval</option>
+                  </select>
+                </div>
+              </div>
+         
+            
+            </div>
+
+<!-- for Spike Test -->
+
+
+<div *ngIf="test.type === 'Spike Test'">
+
+  <div class="checkboxe-spike">
+    <input type="checkbox" id="spikecheckbox" />
+    <label for="conversionCheckbox">Simple Test</label>
+  </div>
+  <div class="min-fact">
+    <p>Min Factor</p>
+    <input type="text" class="minfact"  placeholder="Provide min factor"  >
+    <i class="fa-solid fa-lock"></i>
+
+    <select class="spklckdropdown1" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+
+
+  </div>
+  <div class="max-fact">
+    <p>Max Factor</p>
+    <input type="text" class="maxfact"  placeholder="Provide max factor"  >
+    <i class="fa-solid fa-lock"></i>
+
+    <select class="spklckdropdown2" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+  </div>
+  <div class="ma-devv">
+    <p>Max Deviation</p>
+    <input type="text" class="madevv"  placeholder="Allowed max devations on from expected value"  >
+    <i class="fa-solid fa-lock"></i>
+
+    <select class="spklckdropdown3" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+  </div>
+
+
+</div>
+
+
+
+<!-- for Missing Data Test -->
+
+<div *ngIf="test.type === 'Missing Data Test'">
+
+
+  <div class="thres-hold">
+    <p>Threshold</p>
+    <input type="text" class="threshold"  placeholder="Provide threshold with units or in %"  >
+    <i class="fa-solid fa-lock"></i>
+
+
+    <select class="misslckdropdown1" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+
+  </div>
+
+  <div class="min-cover">
+    <p>Min Coverage</p>
+    <input type="text" class="mincover"  placeholder="Provide min expected coverage"  >
+    <i class="fa-solid fa-lock"></i>
+
+    <select class="misslckdropdown2" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+
+  </div>
+
+  <div class="seque-per">
+    <p>Sequential Periods</p>
+    <input type="text" class="sequeper"  placeholder="Provide max num of allowes seq. periods"  >
+    <i class="fa-solid fa-lock"> </i>
+    <select class="misslckdropdown3" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Constant</option>
+      <option value="option3">Attribute</option>
+      <option value="option1">Result From</option>
+     
+    </select>
+
+
+  </div>
+
+  <div class="misscheckboxe">
+    <input type="checkbox" id="missCheckbox" />
+    <label for=",issdatatestCheckbox">Check PowerDown/PowerUp events</label>
+  </div>
+  <div class="missevent-log">
+    <p>Event Log</p>
+    <div class="misseventlog">
+      <select>
+        <option value="">Select PowerUp/PowerDown event</option>
+        <option value="">Option2</option>
+        <option value="">Option3</option>
+      </select>
+      <i class="fa-solid fa-lock"></i>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- 
+History Test -->
+
+
+<div *ngIf="test.type === 'History Test'">
+
+  <div class="hisopera-content">
+          
+    <p class="oper">Operations</p>
+
+    <div class="hisopersdropdowen">
+      
+      <select>
+        
+        <option value="leftOption1">==</option>
+      <option value="leftOption2"> < </option>
+      <option value="leftOption2"> > </option>
+      <option value="leftOption2"><=</option>
+      <option value="leftOption2">>=</option>
+      <option value="leftOption2">!=</option>
+        </select>
+      </div>
+    </div>
+    <div class="hismax-dev">
+      <p>Max Deviation</p>
+      <input type="text" class="hismax-dv"  placeholder="Provide allowed max devations on bound"  >
+      <i class="fa-solid fa-lock"></i>
+      <select class="hislckdropdown1" name="dropdown1" >
+      
+        <option value="option1"></option>
+        <option value="option2">Constant</option>
+        <option value="option3">Attribute</option>
+        <option value="option1">Result From</option>
+       
+      </select>
+    </div>
+    <div class="daydropdowns">
+        <p>Averging Period</p>
+        <select>
+           <option *ngFor="let day of daysOfTheMonth">{{ day }}</option>
+          </select>
+        </div>
+        <div class="daydropdown">
+          
+          <select>
+            <option *ngFor="let week of weeksOfTheMonth">{{ week }}</option>
+          </select>
+        </div>
+
+
+
+
+<div class="history-box">
+  <p>History</p>
+
+
+  <div class="takedropdowns">
+    <p>Take</p>
+    <select>
+       <option *ngFor="let day of daysOfTheMonth">{{ day }}</option>
+      </select>
+    </div>
+    <div class="max-day-history">
+      <p>Max</p>
+      <select>
+         <option *ngFor="let day of daysOfTheMonth">{{ day }}</option>
+        </select>
+    </div>
+    <div class="History-interval">
+      <p>History Interval</p>
+      <select>
+        <option *ngFor="let week of historyOfTheMonth">{{ week }}</option>
+      </select>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="his-formula">
+          <p>Formula</p>
+          <div class="hisformula">
+            <select>
+              <option value="">AVG(H)</option>
+              <option value="">MAX(H)</option>
+              <option value="">MIN(H)</option>
+            </select>
+            <i class="fa-solid fa-lock"></i>
+          
+            <div class="hislckdropdown2">
+              <select  >
+      
+                <option value="option1"></option>
+                <option value="option2">Constant</option>
+                <option value="option3">Attribute</option>
+                <option value="option1">Result From</option>
+               
+              </select>
+            </div>
+           
+
+
+          </div>
+        </div>
+
+</div>
+
+<!-- Control Test -->
+
+<div *ngIf="test.type === 'Control Test'">
+
+  <div class="hisopera-content">
+          
+    <p class="oper">Operations</p>
+
+    <div class="conopersdropdowen">
+      
+      <select>
+        
+        <option value="leftOption1">==</option>
+      <option value="leftOption2"> < </option>
+      <option value="leftOption2"> > </option>
+      <option value="leftOption2"><=</option>
+      <option value="leftOption2">>=</option>
+      <option value="leftOption2">!=</option>
+        </select>
+      </div>
+    </div>
+    <div class="conmax-dev">
+      <p>Max Deviation</p>
+      <input type="text" class="conmax-dv"  placeholder="Provide allowed max devations on bound"  >
+      <i class="fa-solid fa-lock"></i>
+      <select class="controllckdropdown1" name="dropdown1" >
+      
+        <option value="option1"></option>
+        <option value="option2">Constant</option>
+        <option value="option3">Attribute</option>
+        <option value="option1">Result From</option>
+       
+      </select>
+    </div>
+
+
+
+    <div class="control-interval">
+      <p>Interval</p>
+      <div class="controldropdown">
+        <select>
+          <option value="bound">Select Data Interval types</option>
+          <option value="bound">Each Value</option>
+          <option value="maxDeviation">Whole Interval</option>
+          <option value="interval">Partial Interval</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="express-control">
+      <p>Expression</p>
+      <input type="text" class="Espresscontrol"  placeholder="X == A + B"  >
+      </div>
+
+
+
+
+
+      <div class="control-variable">
+        <div  class="cus-var-nav">
+        Variables
+        </div>
+        <div class="tab-cus">
+        
+        <table>
+        <tr>
+          <th>  </th>
+          <th>Name</th>
+          <th>Value</th>
+        
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>A</td>
+          <td><input type="text" class="wxy" placeholder="30.00kWh">    
+            <!-- <i class="fa-solid fa-lock"></i> -->
+            <select id="dropdown12" name="dropdown1" >
+              
+              <option value="option1"></option>
+              <option value="option2">Kwh</option>
+              <option value="option3">wh</option>
+              <option value="option1">V</option>
+              <option value="option2">Amp</option>
+             
+            </select>
+        
+        
+        </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>B</td>
+          <td>
+        
+            <select   class="AHP">
+                
+              <option value="leftOption1">AHP_ActiveEnergyPlus_ADV_T0</option>
+            <option value="leftOption2">AHP_ActiveEnergyMinus_ADV_T0  </option>
+            <option value="leftOption2"> AHP_ActiveEnergyPlus_CUM_T0 </option>
+            <option value="leftOption2">AHP_ActiveEnergyMinus_CUM_T0</option>
+            <option value="leftOption2">>=</option>
+            <option value="leftOption2">!=</option>
+              </select>
+        
+        
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>2</td>
+          <td>c</td>
+          <td>Austria</td>
+        </tr> -->
+        
+        </table>
+        </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- Custom Test -->
+<div *ngIf="test.type === 'Custom Test'">
+
+
+<div class="express-cust">
+<p>Expression</p>
+<input type="text" class="Espresscust"  placeholder="X == A + B"  >
+</div>
+
+
+
+<div class="custon-variable">
+<div  class="cus-var-nav">
+Variables
+</div>
+<div class="tab-cus">
+
+<table>
+<tr>
+  <th>  </th>
+  <th>Name</th>
+  <th>Value</th>
+
+</tr>
+<tr>
+  <td>0</td>
+  <td>A</td>
+  <td><input type="text" class="wxy" placeholder="30.00kWh">    
+    <i class="fa-solid fa-lock"></i>
+    <select id="dropdown12" name="dropdown1" >
+      
+      <option value="option1"></option>
+      <option value="option2">Kwh</option>
+      <option value="option3">wh</option>
+      <option value="option1">V</option>
+      <option value="option2">Amp</option>
+     
+    </select>
+
+
+</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>B</td>
+  <td>
+
+    <select   class="AHP">
+        
+      <option value="leftOption1">AHP_ActiveEnergyPlus_ADV_T0</option>
+      <option value="leftOption2">AHP_ActiveEnergyMinus_ADV_T0  </option>
+      <option value="leftOption2"> AHP_ActiveEnergyPlus_CUM_T0 </option>
+      <option value="leftOption2">AHP_ActiveEnergyMinus_CUM_T0</option>
+    <option value="leftOption2">>=</option>
+    <option value="leftOption2">!=</option>
+      </select>
+
+
+  </td>
+</tr>
+<!-- <tr>
+  <td>2</td>
+  <td>c</td>
+  <td>Austria</td>
+</tr> -->
+
+</table>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+          </div>
+          </ng-container>
+        </div>
+
+    
+ 
+  

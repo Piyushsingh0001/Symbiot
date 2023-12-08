@@ -1,0 +1,790 @@
+/* navbar.component.css */
+.navbar {
+    background-color: #3498db;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+ 
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left span,
+  .navbar-left i {
+    margin-right: 10px;
+  }
+  
+  .navbar-left .separator {
+    margin: 0 10px;
+  }
+  
+  .plus-icon:hover {
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .navbar-right .dropdown {
+    margin-right: 10px;
+  }
+  
+  /* Define other styles as needed */
+ 
+  
+  .rectangular-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+   display: flex;
+   width: 97%;
+   height: 180px;
+  
+    /* Define styles for the rectangular box as needed */
+  }
+ /*  .box-content {
+    position: absolute;
+    top: 10px; /* Adjust as needed for the desired vertical position 
+    left: 10px;
+  }*/
+  
+  .left-content {
+    width: 50%;
+    float: left; /* Left side takes 50% of the box */
+  }
+  
+/*.right-content {
+    width: 50%; /* Right side takes 50% of the box 
+    text-align: right;
+    float: right;
+  }*/
+ 
+  
+  .dropdown {
+    display: inline-block;
+  }
+  .checkbox {
+    margin-top: 10px; /* Adjust as needed */
+  }
+ /* #conversionCheckbox{
+  margin-top: 12%;
+  justify-content: space-evenly;
+  position: absolute;
+ } */
+
+ .con-checkboxe{
+  justify-content: space-evenly;
+  position: absolute;
+  top: 40%;
+ }
+  .box-contents{
+    margin-left: 10px;
+    position: absolute;
+    top: -7px;
+    background: white;
+  }
+  .rectangular-box i{
+    position: absolute;
+    top: 5px;
+    margin-left: 97%;
+  }
+  .oper{
+    margin-left: 3%;
+  }
+  .dropdowen select{
+    position: absolute;
+    top: 26px;
+    padding: 5px;
+    margin-left: 12%;
+    width: 25%;
+    height: 27px;
+  }
+  .bud-int{
+    margin-left: 46%;
+    position: absolute;
+    top: 40px;
+    width: 25%;
+  }
+  .bound i{
+    margin-left: 73%;
+    position: absolute;
+    top: 42px;
+    color: rgb(227, 227, 164);
+  }
+
+  .conlckdropdown1{
+    margin-left: 75%;
+    position: absolute;
+    top: 42px;
+    width: 17px;
+  
+  }
+
+
+
+  .bound p{
+    position: absolute;
+    top: 25px;
+    margin-left: 40%;
+  }
+  .max-dev p{
+    margin-left: 40%;
+    position: absolute;
+    top: 74px;
+  }
+  .max-dv{
+    margin-left: 46%;
+    position: absolute;
+    top: 91px;
+    width: 25%;
+
+  }
+  .max-dev i{
+    margin-left: 73%;
+    position: absolute;
+    top: 92px;
+    color: rgb(227, 227, 164);
+  }
+
+  .conlckdropdown2{
+    margin-left: 75%;
+    position: absolute;
+    top: 92px;
+    width: 17px;
+  
+  }
+
+  .right-content p{
+    position: absolute;
+    top: 118px;
+    margin-left: 40%;
+  }
+  .right-content select{
+    position: relative;
+    top: 70px;
+    padding: 5px;
+    margin-left: 273%;
+    width: 125%;
+    height: 27px;
+  }
+  .box-sumcontent{
+    margin-left: 5%;
+    position: absolute;
+    top: -25px;
+    background: white;
+  }
+  .left-sumcontent p{
+    position: absolute;
+    top: 21px;
+    left: 3%;
+  }
+ 
+.sum-dropdown select{
+  position: absolute;
+    top: 34px;
+    padding: 5px;
+    margin-left: 12%;
+    width: 25%;
+    height: 27px;
+}
+.sumsum p{
+  position: absolute;
+  top: 25px;
+  left: 41%;
+}
+.sum-int{
+  margin-left: 56%;
+  position: absolute;
+  top: 41px;
+    width: 25%;
+}
+.sumsum i{
+  margin-left: 83%;
+  position: absolute;
+  top: 44px;
+  color: rgb(227, 227, 164);
+}
+
+.sumlckdropdown1{
+  margin-left: 85%;
+  position: absolute;
+  top: 44px;
+  width: 17px;
+
+}
+
+
+.max-devs p{
+  left: 41%;
+    position: absolute;
+    top: 85px;
+}
+.max-dvs{
+  margin-left: 56%;
+  position: absolute;
+  top: 98px;
+  width: 25%;
+}
+.max-devs i{
+  margin-left: 83%;
+  position: absolute;
+  top: 100px;
+  color: rgb(227, 227, 164);
+}
+
+.sumlckdropdown2{
+  margin-left: 85%;
+  position: absolute;
+  top: 100px;
+  width: 17px;
+  align-items: center;
+}
+
+
+.box-spike{
+  margin-left: 11px;
+  position: absolute;
+  top: -25px;
+  background: white;
+}
+#spikecheckbox{
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.min-fact p{
+  position: absolute;
+  top: 20px;
+  left: 41%;
+}
+.minfact{
+  margin-left: 56%;
+  position: absolute;
+  top: 35px;
+  width: 25%;
+}
+.min-fact i{
+  margin-left: 83%;
+    position: absolute;
+    top: 38px;
+    color: rgb(227, 227, 164);
+}
+
+
+.spklckdropdown1{
+  margin-left: 85%;
+  position: absolute;
+  top: 38px;
+  width: 17px;
+
+}
+
+.max-fact p{
+  position: absolute;
+  top: 78px;
+  left: 41%;
+}
+.maxfact{
+  margin-left: 56%;
+  position: absolute;
+  top: 95px;
+  width: 25%;
+}
+.max-fact i{
+  margin-left: 83%;
+    position: absolute;
+    top: 98px;
+    color: rgb(227, 227, 164);
+}
+
+
+.spklckdropdown2{
+  margin-left: 85%;
+  position: absolute;
+  top: 98px;
+  width: 17px;
+
+}
+
+
+.ma-devv p{
+  position: absolute;
+  top: 127px;
+  left: 41%;
+}
+.madevv{
+  margin-left: 56%;
+    position: absolute;
+    top: 143px;
+    width: 25%;
+    font-size: 0.76rem;
+}
+.ma-devv i{
+  margin-left: 83%;
+  position: absolute;
+  top: 145px;
+  color: rgb(227, 227, 164);
+}
+.spklckdropdown3{
+  margin-left: 85%;
+  position: absolute;
+  top: 145px;
+  width: 17px;
+
+}
+
+.box-missdata{
+  margin-left: 11px;
+  position: absolute;
+  top: -25px;
+  background: white;
+}
+.thres-hold p{
+  position: absolute;
+    top: 17px;
+    left: 3%;
+}
+.threshold {
+  margin-left: 20%;
+  position: absolute;
+  top: 34px;
+  width: 255px;
+}
+.thres-hold i{
+  margin-left: 50%;
+  position: absolute;
+  top: 37px;
+  color: rgb(227, 227, 164);
+}
+
+.misslckdropdown1{
+  margin-left: 52%;
+  position: absolute;
+  top: 37px;
+  width: 17px;
+
+}
+
+.min-cover p{
+  position: absolute;
+  top: 60px;
+  left: 3%;
+}
+.mincover{
+  margin-left: 20%;
+  position: absolute;
+  top: 77px;
+  width: 255px;
+}
+.min-cover i{
+  margin-left: 50%;
+  position: absolute;
+  top: 79px;
+  color: rgb(227, 227, 164);
+}
+.misslckdropdown2{
+  margin-left: 52%;
+  position: absolute;
+  top: 79px;
+  width: 17px;
+
+}
+
+.seque-per p{
+  position: absolute;
+  top: 105px;
+  left: 3%;
+}
+.sequeper{
+  margin-left: 20%;
+  position: absolute;
+  top: 120px;
+  width: 255px;
+}
+.seque-per i{
+  margin-left: 50%;
+    position: absolute;
+    top: 123px;
+    color: rgb(227, 227, 164);
+}
+.misslckdropdown3{
+  margin-left: 52%;
+  position: absolute;
+  top: 123px;
+  width: 17px;
+
+}
+
+
+.misscheckboxe label{
+  position: absolute;
+  top: 47px;
+  left: 63%;
+}
+#missCheckbox{
+  position: absolute;
+    right: 38%;
+    top: 46px;
+}
+.missevent-log p{
+  position: absolute;
+    top: 77px;
+    left: 60%;
+}
+.misseventlog select{
+  position: absolute;
+  top: 94px;
+  left: 70%;
+  height: 21px;
+  
+}
+.misseventlog i{
+  position: absolute;
+  top: 96px;
+  right: 2%;
+  color: rgb(227, 227, 164);
+}
+
+
+/* box-control*/
+.box-control{
+  margin-left: 11px;
+  position: absolute;
+  top: -25px;
+  background: white;
+}
+/*  box-custom*/
+.box-custom{
+  margin-left: 11px;
+  position: absolute;
+  top: -25px;
+  background: white;
+}
+.daydropdown{
+  display: flex;
+  margin-top: 100px;
+ 
+  margin-left: 55px;
+}
+.daydropdowns p{
+  position: absolute;
+  top: 135px;
+  left: 2%;
+}
+.daydropdowns select{
+  position: relative;
+  top: 20px;
+  left: 65%;
+  height: 35px;
+  width: 69px;
+}
+.daydropdown select{
+  height: 35px;
+  position: relative;
+  top: -115px;
+  left: 114%;
+  width: 159px;
+}
+/* box Histort*/
+
+.box-history{
+  margin-left: 11px;
+    position: absolute;
+    top: -25px;
+    background: white;
+}
+
+.his-formula p{
+  position: absolute;
+  top: 105px;
+  /* left: 24px; */
+  right: 35%;
+}
+.hisformula select{
+  position: absolute;
+  top: 120px;
+  padding: 5px;
+  width: 25%;
+  height: 24px;
+  right: 8%;
+}
+.his-formula i{
+  position: absolute;
+  top: 126px;
+  left: -4%;
+  color: rgb(227, 227, 164);
+}
+
+.hislckdropdown2 select{
+  position: absolute;
+  top: 124px;
+  left: 95%;
+  width: 17px;
+  height: 18px;
+}
+
+.hismax-dev p{
+  position: absolute;
+    left: 2%;
+    top: 68px;
+}
+ .hismax-dv{
+  position: relative;
+    margin-left: 65%;
+    top: 22px;
+    width: 116%;
+    height: 21px;
+ }
+ .hismax-dev i{
+  right: -90%;
+    top: 3px;
+    position: relative;
+    color: rgb(227, 227, 164);
+ }
+ .hislckdropdown1{
+  right: -197%;
+  position: relative;
+  top: -18px;
+  width: 17px;
+}
+
+ .hisopera-content p{
+  position: relative;
+    left: 0%;
+    top: 10px;
+ }
+ .hisopersdropdowen select{
+  position: absolute;
+  top: 34px;
+  padding: 5px;
+  margin-left: 16%;
+  width: 28%;
+  height: 27px;
+ }
+ .history-box{
+  width: 24%;
+  height: 90px;
+  border: 2px solid rgb(31, 30, 30);
+  position: absolute;
+  left: 67%;
+  top: 4%;
+  border-radius: 16px;
+  background: #F5F5F5;
+  border-width: 1px;
+
+ }
+.history-box p{
+  position: absolute;
+  left: -75px;
+    top: 21px;
+}
+.takedropdowns p{
+  position: absolute;
+  left: 7px;
+  top: 2px;
+}
+.takedropdowns select{
+  position: absolute;
+  left: 53px;
+  top: 15px;
+  height: 25px;
+  border-radius: 8px;
+}
+.max-day-history p{
+  position: absolute;
+  left: 110px;
+  top: 2px;
+}
+.max-day-history select{
+  position: absolute;
+  left: 150px;
+  top: 15px;
+  height: 25px;
+  border-radius: 8px;
+}
+.History-interval p{
+  position: absolute;
+  left: 9px;
+  top: 37px;
+}
+.History-interval select{
+  position: absolute;
+  left: 122px;
+  top: 47px;
+  height: 35px;
+  border-radius: 8px;
+}
+
+
+.express-cust p{
+  position: absolute;
+  margin-left: 0%;
+}
+.Espresscust{
+  position: absolute;
+  top: 24px;
+  margin-left: 16%;
+  text-align: center;
+  width: 26%;
+  height: 20px;
+}
+
+
+
+
+ /* navbar.custom variables css */
+
+ .custon-variable {
+  width: 375px;
+  height: 182px;
+  border: 2px solid black;
+  margin-left: 123%;
+}
+.cus-var-nav{
+  background-color:#3498db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 20px;
+    color: white;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.wxy{
+  background: #dddddd;
+}
+.custon-variable i{
+  position: absolute;
+  top: 29px;
+  left: -52%;
+  color: rgb(227, 227, 164);
+}
+.AHP{
+  width: 67%;
+  font-size: 10px;
+  height: 20px;
+  font-weight: bold;
+}
+
+
+
+.conmax-dv{ 
+  position: absolute;
+  margin-left: 16%;
+  top: 81px;
+  width: 26%;
+  height: 21px;
+}
+
+.conopersdropdowen select{
+  position: absolute;
+  top: 34px;
+  padding: 5px;
+  margin-left: 16%;
+  width: 27%;
+  height: 27px;
+}
+.controllckdropdown1{
+  position: absolute;
+  top: 86px;
+  width: 17px;
+  left: 48%;
+}
+.conmax-dev p{
+  position: absolute;
+  left: 12px;
+  top: 68px;
+}
+.conmax-dev i{
+  left: -52%;
+    top: 86px;
+    position: absolute;
+    color: rgb(227, 227, 164);
+}
+#dropdown12{
+  width: 17px;
+}
+.controldropdown select{
+  position: absolute;
+  top: 122px;
+  padding: 5px;
+  margin-left: 16%;
+  width: 27%;
+  height: 27px;
+
+}
+.control-interval p{
+  position: absolute;
+  left: 12px;
+  top: 108px;
+}
+.Espresscontrol{
+  position: absolute;
+    top: 162px;
+    margin-left: 16%;
+    text-align: center;
+    width: 26%;
+    height: 20px;
+}
+
+.express-control p{
+  position: absolute;
+  left: 12px;
+  top: 148px;
+}
+.control-variable{
+  width: 375px;
+    height: 182px;
+    border: 2px solid black;
+    margin-left: 123%;
+    margin-top: -51px;
+}

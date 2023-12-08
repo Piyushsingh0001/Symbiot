@@ -1,0 +1,76 @@
+<div class="about-content">
+  Name
+    <input type="text" placeholder="Validation Document 6" style="top: 18px;
+    left: 76px;
+    width: 94%;
+    height: 20px;"><br/><br/>
+      <input type="checkbox" /> Change Status of Results
+      <input type="checkbox"> Publish Validation Exception
+      <p class="accordion" (click)="toggleAccordion()"><b>Filter Results</b></p>
+
+      <div class="panel" >
+
+        <!-- <div class="result-filters-header"  >  Result Filters</div> -->
+        <div class="filter-container" >
+      <div class="left-filters">
+        <label for="leftCheckbox">
+          <input type="checkbox" id="leftCheckbox"> Results to be validated
+        </label>
+    <br>
+    <br>
+        <div class="dropdowns1">
+          <label for="leftOrigin"> Origin</label>
+          <app-dropdown [options]="originOptions"></app-dropdown>
+        </div>
+       <br>
+        <div class="dropdowns2">
+          <label for="leftBySource">By source</label>
+            <app-dropdown [options]="sourceOptions"></app-dropdown>
+        </div>
+      <br>
+        <div class="dropdowns3">
+          <label for="leftByStatus">By status</label>
+          <app-dropdown [options]="statusOptions"></app-dropdown>
+        </div>
+      </div>
+      <div class="right-filters">
+        <label for="rightCheckbox">
+          <input type="checkbox" id="rightCheckbox"> Results to be used in tests
+        </label>
+        <br>
+        <br>
+        <div class="dropdowns4">
+          <label for="rightOrigin">Origin</label>
+          <app-dropdown [options]="originOptions"></app-dropdown>
+        </div>
+        <br>
+      
+        <div class="dropdowns5">
+          <label for ="rightBySource">By source</label>
+            <app-dropdown [options]="sourceOptions"></app-dropdown>
+        </div>
+        <br>
+        <div class="dropdowns6">
+          <label for="rightByStatus">By status</label>
+          <app-dropdown [options]="statusOptions"></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- <div class="rules-definitions">
+    <div class="rules-definitions-header">Rules Definitions</div>
+    <div class="add-icon" (click)="openRegistrationForm()">
+
+      <i class="fa fa-plus"></i> -->
+
+      <div class="rule-definitions-container">
+        <p class="accordiones" (click)="toggleAccordion()">Rule Definitions</p>
+        <i class="fa fa-plus"></i>
+        <div class="paneles" [ngClass]="{ 'active': isAccordionOpen  }">
+
+    </div>
+  </div>
+  <app-navbar></app-navbar>
+</div>

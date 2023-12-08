@@ -1,0 +1,24 @@
+<div class="popup" *ngIf="isPopupVisible">
+  <div class="popup-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <nav class="hie">
+    <h2>Add register</h2></nav>
+    <form (ngSubmit)="submitForm()">
+      <label for="dropdown1">Register Group:</label>
+      <select id="dropdown1" name="dropdown1" [(ngModel)]="formData.dropdown1">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <label for="dropdown2">Register:</label>
+      <select id="dropdown2" name="dropdown2" [(ngModel)]="formData.dropdown2">
+        <option value="optionA">Option A</option>
+        <option value="optionB">Option B</option>
+        <option value="optionC">Option C</option>
+      </select>
+
+      <button type="submit" (click)="openToast()">add</button>
+    </form>
+  </div>
+</div>
